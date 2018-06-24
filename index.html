@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="瑞洋建材">
+    <meta name="keywords" content="瑞洋建材">
+    <meta name="author" content="Mr wang">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>瑞洋建材</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="container-fluid">
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <div class="row">
+        <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+      </div>
+    <div class="yang-title">
+        <div class="title-left">
+            你好，欢迎来到瑞洋建材!
+        </div>
+        <div class="title-right">
+            <a href="javascript:;">公司详情</a>
+            <a href="javascript:;">联系方式</a>
+        </div>
+    </div>
+    <div class="yang-content">
+            <ul class="nav nav-pills">
+                <li role="presentation" class="active"><a href="JavaScript:;">Home</a></li>
+                <li role="presentation"><a href="JavaScript:;">Profile</a></li>
+                <li role="presentation"><a href="JavaScript:;">Messages</a></li>
+            </ul>
+        <div id="allmap"></div>
+    </div>
+</div>
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/content.js"></script>
+<!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=6AyDuiGEcCCPI0oE6FKspQQ9NyZPCok0"></script> -->
+<!-- <script>
+    // 百度地图API功能
+	var map = new BMap.Map("allmap");    // 创建Map实例
+	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+	//添加地图类型控件
+	map.addControl(new BMap.MapTypeControl({
+		mapTypes:[
+            BMAP_NORMAL_MAP,
+            BMAP_HYBRID_MAP
+        ]}));	  
+	map.setCurrentCity("郑州");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+</script> -->
+<script type="text/javascript">
+
+
+    // 雪花飘落
+    
+    // function getColor () {
+    //     var r = Math.floor(Math.random() * 256);
+    //     var g = Math.floor(Math.random() * 256);
+    //     var b = Math.floor(Math.random() * 256);
+    //     return "rgb(" + r  + "," + g + "," + b + ")";
+    // }
+    // var newOn = 100;
+    // var flake = $('<div class="star"></div>').css('position', 'absolute').html('*');
+    // $(function () {
+    //     var dwidth = $(document).width()
+    //     var dheight = $(document).height()
+        
+    //     setInterval(function(){
+    //         var startLeft = Math.random() * dwidth; 
+    //         var endLeft = Math.random() * dheight;
+    //         var flakeSize = 5 + 50 * Math.random();
+    //         var durationTime = 4000 + 7000 * Math.random();
+    //         var startOpacity = 0.7 + 0.3 * Math.random();
+    //         var endOpacity = 0.4 + 0.3 * Math.random();
+
+    //         flake.clone().appendTo($("body")).css({
+    //             "left": startLeft,
+    //             "fontSize": flakeSize,
+    //             "color": getColor(),
+    //             "top": "55px",
+    //             "opacity": startOpacity
+    //         }).animate({
+    //             "top": dheight,
+    //             "left": endLeft,
+    //             "opacity": endOpacity
+    //         }, 2500)
+    //         // var i = 0;
+    //         // setInterval(function() {
+    //         //     i += 1;
+    //         //     console.log(i)
+    //         //     console.log($('body .star').eq(i))
+    //         //     $('body .star').eq(0).remove()
+    //         // }, 1200)
+            
+    //     }, 100)
+        
+    // })
+    
+    // $('.content').html('sdfsdf')
+</script>
+</body>
+</html>
