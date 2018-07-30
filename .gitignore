@@ -1,0 +1,11 @@
+.DS_Store
+
+# modules installed by npm
+node_modules
+
+# jetbrains project
+.idea
+
+# vs sode project
+.vscode
+
