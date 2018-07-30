@@ -8,19 +8,82 @@
     <meta name="author" content="Mr wang">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>瑞洋建材</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<div class="container-fluid">
-    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+  <div class="container-fluid">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand logo" href="#">
+              <img alt="Brand" src="./image/favicon.ico">
+            </a>
+          <a class="navbar-brand" href="#">Hi, 欢迎来到瑞阳建材</a>
+        </div>
+      
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+              <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
+              <li><a href="#">首页</a></li>
+              <li><a href="#">关于我们</a></li>
+          </ul>
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav>
     <div class="row">
-        <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+      <div id="myCarousel" class="carousel slide col-xs-10 col-sm-8 col-md-8 col-sm-offset-2">
+          <!-- 轮播（Carousel）指标 -->
+          <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>   
+          <!-- 轮播（Carousel）项目 -->
+          <div class="carousel-inner">
+              <div class="item active">
+                  <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532881296895&di=80a0a260fb98eb5020d464c62c35bd66&imgtype=0&src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2Fc30019c493ec7099fcc0c7b58572d88d070e376c.jpg" alt="First slide">
+              </div>
+              <div class="item">
+                  <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532881296895&di=d84fb83cca32902ed59e5e182d2de387&imgtype=0&src=http%3A%2F%2Fi1.17173.itc.cn%2F2013%2Fps2%2F2013%2F01%2F25%2Fimg_20130109-20-00-16.jpg" alt="Second slide">
+              </div>
+              <div class="item">
+                  <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532881296893&di=eec7c9be5bb75c7d37d81978a4f50a7d&imgtype=0&src=http%3A%2F%2Fi2.17173.itc.cn%2F2013%2Fps2%2F2013%2F01%2F25%2Fimg_20130109-19-49-17.jpg" alt="Third slide">
+              </div>
+          </div>
+          <!-- 轮播（Carousel）导航 -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><<span class="sr-only">Previous</span></a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">><span class="sr-only">Next</span></a>
+      </div> 
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+      <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+      <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+      <!-- Optional: clear the XS cols if their content doesn't match in height -->
+      <div class="clearfix visible-xs-block"></div>
+      <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+    </div>
+  </div>
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <!-- <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-md-8</div>
         <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-      </div>
-    <div class="yang-title">
+    </div> -->
+    <!-- <div class="yang-title">
         <div class="title-left">
             你好，欢迎来到瑞洋建材!
         </div>
@@ -36,8 +99,8 @@
                 <li role="presentation"><a href="JavaScript:;">Messages</a></li>
             </ul>
         <div id="allmap"></div>
-    </div>
-</div>
+    </div> -->
+
 <script src="./js/jquery.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/content.js"></script>
