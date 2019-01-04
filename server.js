@@ -8,5 +8,5 @@ app.use(express.static(path.join(__dirname, './')));
 
 // 监听端口
 app.listen(port, function(parmas) {
-  console.log('listen to http://localhost:' + port);
+    console.log('listen to http://0.0.0.0:' + port);
 })
