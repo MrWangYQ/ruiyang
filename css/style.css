@@ -22,15 +22,15 @@ img {
 
 .row {
     background: #ffffff;
+    margin: 0px;
 }
 
 
 /* box */
 
 body>.container-fluid {
-    /* min-width: 1124px; */
     height: 100%;
-    padding: 10px;
+    padding: 10px 0px;
     background: #ffffff;
 }
 
@@ -44,10 +44,6 @@ body>.container-fluid {
     background: #ffffff;
 }
 
-.navbar-header {
-    /* padding: 0 15px; */
-}
-
 .navbar-header .logo {
     width: 70px;
     height: 50px;
@@ -59,6 +55,8 @@ body>.container-fluid {
     width: 100%;
     margin-left: 10px;
 }
+/* 轮播 */
+
 
 
 /* Carousel */
@@ -66,52 +64,24 @@ body>.container-fluid {
 .myCarousel {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2%;
-    margin-bottom: 2%;
 }
 
 
 /* control */
-
-.carousel-control {
-    top: 45%;
+.carousel {
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
-.carousel-control.right,
-.carousel-control.left {
-    background-image: none;
-}
-
-
-/* title */
-
-.yang-title {
-    width: 100%;
-    height: 45px;
-    line-height: 45px;
-    background: #ffffff;
-    border-bottom: 1px solid #ccc;
-    padding: 0px 50px;
-}
-
-.yang-title>.title-left {
-    float: left;
-}
-
-.yang-title>.title-right {
-    float: right;
-}
-
-
-/* title */
-
-
-/* content */
-
-.yang-content {
-    width: 100%;
-    height: 100%;
-    background: #f5f5f5;
+.carousel-control.left_next,
+.carousel-control.right_next {
+    width: 10%;
+    height: 12%;
+    line-height: 2;
+    position: absolute;
+    top: 50%;
+    margin-top: -2%;
+    background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
 }
 
 
@@ -121,6 +91,14 @@ body>.container-fluid {
     body {
         background-color: lightblue;
     }
+    .left_next, .right_next {
+        font-size: 18px;
+    }
+    .carousel-control.left_next,
+    .carousel-control.right_next {
+        width: 15%;
+        line-height: 2;
+    }
 }
 
 
@@ -128,8 +106,9 @@ body>.container-fluid {
 
 @media screen {
     body {
-        color: #f00;
+        /* color: #f00; */
     }
+    
 }
 
 
@@ -141,9 +120,22 @@ body>.container-fluid {
     }
 }
 
-@media screen and (device-width: 1024px) {
+@media screen and (min-width: 1024px) {
     .test {
         display: block;
+    }
+    
+    .left_next, .right_next {
+        font-size: 40px;
+        
+    }
+
+    .carousel-inner,
+    .carousel-inner .item {
+        height: 600px;
+    }
+    .carousel-inner .item img {
+        height: 100%;
     }
 }
 

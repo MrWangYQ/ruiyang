@@ -1,7 +1,3 @@
-/**	
-	Author : Dean Han
-	Date : 2016.01.26
-**/
 var canvas, ctx;
 
 var hours, minutes, seconds;
@@ -13,6 +9,7 @@ var width;
 var marginTop, marginLeft;
 
 window.onload = app;
+window.onresize = app;
 
 function app() {
     init();
@@ -144,33 +141,33 @@ function update() {
             addBalls(marginLeft, marginTop, parseInt(hours / 10));
         }
         if (parseInt(nexthours % 10) != parseInt(hours % 10)) {
-            addBalls(marginLeft + 9 * width, marginTop, parseInt(hours % 10));
+            addBalls(marginLeft + 5 * width, marginTop, parseInt(hours % 10));
         }
         if (parseInt(nextminutes / 10) != parseInt(minutes / 10)) {
-            addBalls(marginLeft + 23 * width, marginTop, parseInt(minutes / 10));
+            addBalls(marginLeft + 14 * width, marginTop, parseInt(minutes / 10));
         }
         if (parseInt(nextminutes % 10) != parseInt(minutes % 10)) {
-            addBalls(marginLeft + 32 * width, marginTop, parseInt(minutes % 10));
+            addBalls(marginLeft + 28 * width, marginTop, parseInt(minutes % 10));
         }
         if (parseInt(nextseconds / 10) != parseInt(seconds / 10)) {
-            addBalls(marginLeft + 46 * width, marginTop, parseInt(seconds / 10));
+            addBalls(marginLeft + 43 * width, marginTop, parseInt(seconds / 10));
         }
         if (parseInt(nextseconds % 10) != parseInt(seconds % 10)) {
-            addBalls(marginLeft + 55 * width, marginTop, parseInt(seconds % 10));
+            addBalls(marginLeft + 52 * width, marginTop, parseInt(seconds % 10));
         }
         seconds = nextseconds;
         hours = nexthours;
         minutes = nextminutes;
     }
-    for (var i = 0; i < hearts.length; i++) {
-        var heart = hearts[i];
-        heart.tx += heart.vx;
-        heart.ty += heart.vy;
-        heart.vy += heart.g;
-        if (heart.ty >= h) {
-            hearts.splice(i, 1);
-        }
-    }
+    // for (var i = 0; i < hearts.length; i++) {
+    //     var heart = hearts[i];
+    //     heart.tx += heart.vx;
+    //     heart.ty += heart.vy;
+    //     heart.vy += heart.g;
+    //     if (heart.ty >= h) {
+    //         hearts.splice(i, 1);
+    //     }
+    // }
 }
 
 function addBalls(x, y, num) {
@@ -196,19 +193,19 @@ function addBalls(x, y, num) {
 
 function render() {
     ctx.clearRect(0, 0, w, h);
-    renderDigit(marginLeft, marginTop, parseInt(hours / 10));
-    renderDigit(marginLeft + 9 * width, marginTop, parseInt(hours % 10));
-    renderDigit(marginLeft + 18 * width, marginTop, 10);
+    renderDigit(marginLeft - 15, marginTop, parseInt(hours / 10));
+    renderDigit(marginLeft + 5 * width, marginTop, parseInt(hours % 10));
+    renderDigit(marginLeft + 14 * width, marginTop, 10);
 
-    renderDigit(marginLeft + 23 * width, marginTop, parseInt(minutes / 10));
-    renderDigit(marginLeft + 32 * width, marginTop, parseInt(minutes % 10));
-    renderDigit(marginLeft + 41 * width, marginTop, 10);
+    renderDigit(marginLeft + 20 * width, marginTop, parseInt(minutes / 10));
+    renderDigit(marginLeft + 29 * width, marginTop, parseInt(minutes % 10));
+    renderDigit(marginLeft + 38 * width, marginTop, 10);
 
-    renderDigit(marginLeft + 46 * width, marginTop, parseInt(seconds / 10));
-    renderDigit(marginLeft + 55 * width, marginTop, parseInt(seconds % 10));
+    renderDigit(marginLeft + 43 * width, marginTop, parseInt(seconds / 10));
+    renderDigit(marginLeft + 52 * width, marginTop, parseInt(seconds % 10));
 
-    for (var i = 0; i < hearts.length; i++) {
-        var heart = hearts[i];
-        heart.heart.draw(heart.tx, heart.ty, heart.color);
-    }
+    // for (var i = 0; i < hearts.length; i++) {
+        // var heart = hearts[i];
+        // heart.heart.draw(heart.tx, heart.ty, heart.color);
+    // }
 }
