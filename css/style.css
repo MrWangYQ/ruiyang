@@ -20,7 +20,7 @@ img {
     width: 100%;
 }
 
-.row {
+.content-bd .row {
     background: #ffffff;
     margin: 0px;
 }
@@ -37,14 +37,14 @@ body>.container-fluid {
 
 /* nav */
 
-.navbar {
+.content-bd .navbar {
     border: none;
     border-bottom: 1px solid #e7e7e7;
     margin: 0px;
     background: #ffffff;
 }
 
-.navbar-header .logo {
+.content-bd .navbar-header .logo {
     width: 70px;
     height: 50px;
     padding: 5px 10px;
@@ -55,8 +55,42 @@ body>.container-fluid {
     width: 100%;
     margin-left: 10px;
 }
-/* 轮播 */
 
+.QRInfo {
+    position: relative;
+}
+
+.QRInfo .QR-content {
+    display: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    border: 1px dashed #0000007c;
+    width: 102px;
+    height: 102px;
+    /* overflow: hidden; */
+}
+
+.QRInfo img {
+    width: 100px;
+    height: 100px;
+}
+
+.QR-img {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-left: 1px solid #a5a3a3;
+    border-top: 1px solid #a5a3a3;
+    background: transparent;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -4px;
+    left: 56px;
+}
+
+
+/* 轮播 */
 
 
 /* Carousel */
@@ -68,6 +102,7 @@ body>.container-fluid {
 
 
 /* control */
+
 .carousel {
     padding-left: 0px;
     padding-right: 0px;
@@ -81,36 +116,68 @@ body>.container-fluid {
     position: absolute;
     top: 50%;
     margin-top: -2%;
-    background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+    /* background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 100%); */
+    background-image: none!important;
 }
 
+
+/* .carousel-control.left_next {
+    left: 4%;
+}
+
+.carousel-control.right_next {
+    right: 4%;
+} */
+
+
 /* maps */
+
 .maps {
     overflow: hidden;
 }
-.panel-body {
+
+.maps .panel-body {
     padding: 0px;
 }
+
 .form-control:focus {
     border: 1px solid #cccccc;
     box-shadow: none;
 }
+
 .tangram-suggestion-main {
     z-index: 2!important;
 }
+
+
+/*  实物展示 */
+
+.Physical-display .panel {
+    margin: 10px 0px;
+}
+
+.Physical-display .panel-body {
+    padding: 10px 0px;
+    text-align: center;
+}
+
+
 /* content */
 
 @media screen and (max-width: 375px) {
     body {
         background-color: lightblue;
     }
-    .left_next, .right_next {
+    .left_next,
+    .right_next {
         font-size: 18px;
     }
     .carousel-control.left_next,
     .carousel-control.right_next {
         width: 15%;
+        height: 20%;
         line-height: 2;
+        /* background-image: none; */
     }
     .allmap {
         min-width: 320px!important;
@@ -125,7 +192,6 @@ body>.container-fluid {
     body {
         /* color: #f00; */
     }
-    
 }
 
 
@@ -141,12 +207,10 @@ body>.container-fluid {
     .test {
         display: block;
     }
-    
-    .left_next, .right_next {
+    .left_next,
+    .right_next {
         font-size: 40px;
-        
     }
-
     .carousel-inner,
     .carousel-inner .item {
         height: 600px;

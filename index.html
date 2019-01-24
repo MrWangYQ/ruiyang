@@ -18,10 +18,9 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid content-bd">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
@@ -29,37 +28,40 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand logo" href="#">
+                    <a class="navbar-brand logo" href="sms://'18610623450'?body='这是一条测试信息'">
                         <img alt="Brand" src="./image/favicon.ico">
                     </a>
-                    <a class="navbar-brand" href="#">Hi, 欢迎</a>
-                    <!-- 来到瑞洋建材 -->
+                    <a class="navbar-brand" href="wtai://wp//mc;18610623450">Hi, 欢迎</a>
                 </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
                         <li><a href="#首页">首页</a></li>
                         <li><a href="#关于我们">关于我们</a></li>
+                        <li class='QRInfo'>
+                            <a href="javascipt:;" class='contact'>联系我们</a>
+                            <div class="QR-content">
+                                <span class="QR-img"></span>
+                                <img src='' data-src="./image/code.jpg" id="QRcode" />
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="row">
-            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10"  style="padding: 10px 0px;">
-                
+        <!-- <div class="row">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10" style="padding: 10px 0px;">
+
             </div>
-        </div>
+        </div> -->
         <div class="row" id="carousel">
-            <div id="myCarousel" class="carousel canvasPosition slide col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10">
-                <!-- 轮播（Carousel）指标 -->
+            <div id="myCarousel" class="carousel canvasPosition slide col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10">
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
                     <li data-target="#myCarousel" data-slide-to="2"></li>
                 </ol>
-                <!-- 轮播（Carousel）项目 -->
                 <div class="carousel-inner">
                     <div class="item active">
                         <img src="./image/timg.jpg" alt="First slide">
@@ -71,7 +73,6 @@
                         <img src="./image/timgcars.jpg" alt="Third slide">
                     </div>
                 </div>
-                <!-- 轮播（Carousel）导航 -->
                 <a class="left carousel-control left_next iconfont icon-fanhui" href="#myCarousel" role="button" data-slide="prev"></a>
                 <a class="right carousel-control right_next iconfont icon-gengduo" href="#myCarousel" role="button" data-slide="next"></a>
             </div>
@@ -91,8 +92,8 @@
                   </ul>
             </div>
         </div> -->
-        <div class="row maps" id="map">
-            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10"  style="padding: 10px 0px;">
+        <!-- <div class="row maps" id="map">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10" style="padding: 10px 0px;">
                 <div class="panel panel-default">
                     <div class="panel-heading">地理位置(Location Information)</div>
                     <div class="panel-body">
@@ -119,118 +120,157 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+        <div class="row Physical-display">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">食物展示</div>
+                    <div class="panel-body">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                            <img src="./image/timg.jpg" alt="">
+                            <p>这是一列</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                            <img src="./image/timgcar.jpg" alt="">
+                            <p>这是二列</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                            <img src="./image/timgcars.jpg" alt="">
+                            <p>这是三列</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="row">
-            
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            </div>
         </div>
     </div>
 
-<script src="./js/jquery.min.js"></script>
-<script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+        $('.contact').hover(function() {
+            var QRcode = $('#QRcode');
+            var QRSrc = QRcode.attr('src');
+            if (!QRSrc) {
+                $('.QR-content').show();
+                QRcode.attr('src', QRcode.data('src'));
 
-<script>
-    var lng = document.getElementById('longitude');
-    var lat = document.getElementById('latitude');
-    // 百度地图API功能
-    var map = new BMap.Map("allmap");    // 创建Map实例
-    // getGeolocation();
-    // map.centerAndZoom(new BMap.Point(113.42, 34.44), 15);
-    map.centerAndZoom('新郑机场', 12);
-    //添加地图类型控件
-    // map.addControl(new BMap.MapTypeControl({
-    //     mapTypes:[
-    //         BMAP_NORMAL_MAP,
-    //         BMAP_HYBRID_MAP
-    //     ]
-    // }));
-    var geolocation = new BMap.Geolocation();
-    geolocation.getCurrentPosition(function(r){
-        if(this.getStatus() == BMAP_STATUS_SUCCESS){
-            var mk = new BMap.Marker(r.point);
-            // var mk = new BMap.Marker(new BMap.Point(r.point))
-            map.addOverlay(mk);
-            map.panTo(r.point);
-            // getGeolocation(r.point.lng, r.point.lat);
-            // alert('您的位置：'+r.point.lng+','+r.point.lat);
-        }
-        else {
-            alert('failed'+this.getStatus());
-        }        
-    });
-    map.setCurrentCity("郑州");          // 设置地图显示的城市 此项是必须设置的
-    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-
-    //  定位城市
-    // function myFun(result){
-    //     var cityName = result.name;
-    //     map.setCenter(cityName);
-    //     console.log(result);
-    //     alert("当前定位城市:"+cityName);
-    // }
-    // var myCity = new BMap.LocalCity();
-    // myCity.get(myFun); 
-    function getGeolocation(lng = 113.42, lat = 34.44) {
-        map.centerAndZoom(new BMap.Point(lng, lat), 15);  // 初始化地图,设置中心点坐标和地图级别
-    }
-    function G(id) {
-        console.log(document.getElementById(id), 'document.getElementById(id)')
-        return document.getElementById(id);
-    }
-
-    //  自定义搜索
-    var ac = new BMap.Autocomplete(    //建立一个自动完成的对象
-        {"input" : "suggestId"
-        ,"location" : map
-    });
-
-    ac.addEventListener("onhighlight", function(e) {  //鼠标放在下拉列表上的事件
-        
-        var str = "";
-        var _value = e.fromitem.value;
-        var value = "";
-        if (e.fromitem.index > -1) {
-            value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
-        }    
-        str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
-        
-        value = "";
-        if (e.toitem.index > -1) {
-            _value = e.toitem.value;
-            value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
-        }    
-        str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
-        // G("searchResultPanel").innerHTML = str;
-    });
-
-    var myValue;
-    ac.addEventListener("onconfirm", function(e) {    //鼠标点击下拉列表后的事件
-        lng.value = '';
-        lat.value = '';
-        var _value = e.item.value;
-        myValue = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
-        G("searchResultPanel").innerHTML ="onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
-        
-        setPlace();
-    });
-
-
-    function setPlace(){// 创建地址解析器实例
-        var myGeo = new BMap.Geocoder();// 将地址解析结果显示在地图上,并调整地图视野
-        myGeo.getPoint(myValue, function(point){
-            if (point) {
-                map.centerAndZoom(point, 16);
-                map.addOverlay(new BMap.Marker(point));
             }
-        }, "北京");
-    }
+        }, function() {
+            $('.QR-content').hide();
+            if ($('#QRcode').attr('src')) {
+                $('#QRcode').attr('src', '');
 
-    map.addEventListener('click', function (e) {        
-        lng.value = e.point.lng;
-        lat.value = e.point.lat;
-    })
+            }
+        })
+    </script>
+    <script>
+        var lng = document.getElementById('longitude');
+        var lat = document.getElementById('latitude');
+        // 百度地图API功能
+        var map = new BMap.Map("allmap"); // 创建Map实例
+        // getGeolocation();
+        // map.centerAndZoom(new BMap.Point(113.42, 34.44), 15);
+        map.centerAndZoom('新郑机场', 12);
+        //添加地图类型控件
+        // map.addControl(new BMap.MapTypeControl({
+        //     mapTypes:[
+        //         BMAP_NORMAL_MAP,
+        //         BMAP_HYBRID_MAP
+        //     ]
+        // }));
+        var geolocation = new BMap.Geolocation();
+        geolocation.getCurrentPosition(function(r) {
+            if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+                var mk = new BMap.Marker(r.point);
+                // var mk = new BMap.Marker(new BMap.Point(r.point))
+                map.addOverlay(mk);
+                map.panTo(r.point);
+                // getGeolocation(r.point.lng, r.point.lat);
+                // alert('您的位置：'+r.point.lng+','+r.point.lat);
+            } else {
+                alert('failed' + this.getStatus());
+            }
+        });
+        map.setCurrentCity("郑州"); // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
 
-//  自定义搜索
+        //  定位城市
+        // function myFun(result){
+        //     var cityName = result.name;
+        //     map.setCenter(cityName);
+        //     console.log(result);
+        //     alert("当前定位城市:"+cityName);
+        // }
+        // var myCity = new BMap.LocalCity();
+        // myCity.get(myFun); 
+        function getGeolocation(lng = 113.42, lat = 34.44) {
+            map.centerAndZoom(new BMap.Point(lng, lat), 15); // 初始化地图,设置中心点坐标和地图级别
+        }
 
+        function G(id) {
+            console.log(document.getElementById(id), 'document.getElementById(id)')
+            return document.getElementById(id);
+        }
+
+        //  自定义搜索
+        var ac = new BMap.Autocomplete( //建立一个自动完成的对象
+            {
+                "input": "suggestId",
+                "location": map
+            });
+
+        ac.addEventListener("onhighlight", function(e) { //鼠标放在下拉列表上的事件
+
+            var str = "";
+            var _value = e.fromitem.value;
+            var value = "";
+            if (e.fromitem.index > -1) {
+                value = _value.province + _value.city + _value.district + _value.street + _value.business;
+            }
+            str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+
+            value = "";
+            if (e.toitem.index > -1) {
+                _value = e.toitem.value;
+                value = _value.province + _value.city + _value.district + _value.street + _value.business;
+            }
+            str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+            // G("searchResultPanel").innerHTML = str;
+        });
+
+        var myValue;
+        ac.addEventListener("onconfirm", function(e) { //鼠标点击下拉列表后的事件
+            lng.value = '';
+            lat.value = '';
+            var _value = e.item.value;
+            myValue = _value.province + _value.city + _value.district + _value.street + _value.business;
+            G("searchResultPanel").innerHTML = "onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
+
+            setPlace();
+        });
+
+
+        function setPlace() { // 创建地址解析器实例
+            var myGeo = new BMap.Geocoder(); // 将地址解析结果显示在地图上,并调整地图视野
+            myGeo.getPoint(myValue, function(point) {
+                if (point) {
+                    map.centerAndZoom(point, 16);
+                    map.addOverlay(new BMap.Marker(point));
+                }
+            }, "北京");
+        }
+
+        map.addEventListener('click', function(e) {
+            lng.value = e.point.lng;
+            lat.value = e.point.lat;
+        })
+
+        //  自定义搜索
     </script>
 
     <!-- <script>
