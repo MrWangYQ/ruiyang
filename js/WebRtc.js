@@ -38,7 +38,7 @@ function getDevices(deviceInfos) {
             option.text = videoLabel;
             videoSelect.appendChild(option);
         } else {
-            console.log('Found one other kind of source/device: ', deviceInfo);
+            // console.log('Found one other kind of source/device: ', deviceInfo);
         }
     }
 }
@@ -75,5 +75,5 @@ function handleSuccess(stream) {
 }
 
 function handleError(error) {
-    console.log('getUserMedia Error: ', error);
+    // console.log('getUserMedia Error: ', error);
 }

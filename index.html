@@ -120,7 +120,7 @@
         <div class="row Physical-display" id="photoShow">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">食物展示</div>
+                    <div class="panel-heading">实物展示</div>
                     <div class="panel-body">
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
                             <img src="./image/timg.jpg" alt="">
@@ -171,24 +171,29 @@
     <script>
         $(function() {
             // console.log($('.selectpicker'))
-            $('.selectpicker').selectpicker();
+          $('.selectpicker').selectpicker();
         })
         $('.contact').hover(function() {
-            var QRcode = $('#QRcode');
-            var QRSrc = QRcode.attr('src');
-            if (!QRSrc) {
-                $('.QR-content').show();
-                QRcode.attr('src', QRcode.data('src'));
-            }
+          var QRcode = $('#QRcode');
+          var QRSrc = QRcode.attr('src');
+          if (!QRSrc) {
+            $('.QR-content').show();
+            QRcode.attr('src', QRcode.data('src'));
+          }
         }, function() {
-            $('.QR-content').hide();
-            if ($('#QRcode').attr('src')) {
-                $('#QRcode').attr('src', '');
-            }
+          $('.QR-content').hide();
+          if ($('#QRcode').attr('src')) {
+            $('#QRcode').attr('src', '');
+          }
         })
+        function ShowRtc() {
+          $('.webRtc-tips').hide();
+          if ($('#WebRtcVideo')) {
 
+          }
+        }
         function showDisclaimer() {
-            console.log('--------------');
+          console.log('--------------')
         }
     </script>
 </body>
