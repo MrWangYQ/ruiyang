@@ -16,7 +16,7 @@ var ip = networkInterfaces['WLAN'][1].address
     // console.log(ip);
     // // 监听端口
 app.listen(port, function(parmas) {
-    console.log('listen to http://' + ip + ':' + port);
+    console.log('listen to http://' + '0.0.0.0' + ':' + port);
 })
 var https = require('https'),
     fs = require("fs");
