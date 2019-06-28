@@ -60,16 +60,16 @@ body>.container-fluid {
     position: relative;
 }
 
-.QRInfo .QR-content {
+/* .QR-content {
     display: none;
     position: absolute;
-    left: 50%;
-    margin-left: -60px;
+    right: 0px;
+    top: 50px;
     border: 1px dashed #0000007c;
     width: 102px;
     height: 102px;
-    /* overflow: hidden; */
-}
+    z-index: 100;
+} */
 
 .QRInfo img {
     width: 100px;
@@ -138,6 +138,14 @@ body>.container-fluid {
 
 .maps .panel-body {
     padding: 0px;
+}
+.panel-image {
+    width: 100%;
+    height: 100%;
+}
+.height {
+    height: 3em;
+    line-height: 3em;
 }
 
 .form-control:focus {

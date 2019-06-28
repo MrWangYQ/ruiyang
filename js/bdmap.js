@@ -3,8 +3,8 @@ var lat = document.getElementById('latitude');
 // 百度地图API功能
 var map = new BMap.Map("allmap"); // 创建Map实例
 // getGeolocation();
-// map.centerAndZoom(new BMap.Point(113.42, 34.44), 15);
-map.centerAndZoom('新郑机场', 12);
+// map.centerAndZoom(new BMap.Point(114.05072719904786, 34.42598049294945), 15);
+map.centerAndZoom('开封市尉氏县大马乡', 15);
 //添加地图类型控件
 // map.addControl(new BMap.MapTypeControl({
 //     mapTypes:[
@@ -19,10 +19,10 @@ geolocation.getCurrentPosition(function(r) {
         // var mk = new BMap.Marker(new BMap.Point(r.point))
         map.addOverlay(mk);
         map.panTo(r.point);
-        // getGeolocation(r.point.lng, r.point.lat);
+        getGeolocation(r.point.lng, r.point.lat);
         // alert('您的位置：'+r.point.lng+','+r.point.lat);
     } else {
-        alert('failed' + this.getStatus());
+        // alert('failed' + this.getStatus());
     }
 });
 map.setCurrentCity("郑州"); // 设置地图显示的城市 此项是必须设置的
