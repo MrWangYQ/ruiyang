@@ -7,8 +7,39 @@ var networkInterfaces = os.networkInterfaces();
 const app = express();
 const port = 3001;
 
+
+app.all('*', function(req, res, next) {
+    console.log(req.method);
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header('Access-Control-Allow-Headers', 'Content-type');
+    res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS,PATCH");
+    res.header('Access-Control-Max-Age',1728000);//预请求缓存20天
+    next();  
+});
+
+
 // // 加载静态资源
 app.use(express.static(path.join(__dirname, './')));
+
+app.get('/crm/manager/wx/listWxAccount', function (req, res) {
+    let data = {
+        "message":"success",
+        "code":200,
+        "timestamp":3213213212,
+        "page":{
+          "pageNo": 1,                        // #当前第几页
+          "pageSize": 10,                     // #每页数量
+          "total": 100                          // #总共记录数
+        },
+        "data":[
+          {
+            "id": 1,
+          }
+        ]
+      }
+    data = JSON.stringify(data);
+    res.send(data);
+ })  
 
 // // os 以太网的所有信息
 // // console.info(networkInterfaces);
