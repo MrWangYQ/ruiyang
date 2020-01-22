@@ -1,6 +1,7 @@
 const express = require('express');
 var path = require('path');
 var os = require("os");
+const opn = require('opn');
 
 var networkInterfaces = os.networkInterfaces();
 
@@ -58,5 +59,7 @@ var options = {
 };
 
 https.createServer(options, app).listen(3011, function() {
-    console.log('Https server listening on port ' + 3001);
+  opn('http://localhost:3001', { app: ['chrome', '--incognito']});
+  console.log('Https server listening on port ' + 3001);
 });
+
